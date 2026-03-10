@@ -1,0 +1,38 @@
+{
+  "id": "",
+  "name": "",
+  "stageName": "",
+  "age": 0,
+  "instrument": "",
+  "role": "member",
+  "position": "",
+  "genrePreferences": {
+    "pop": 3,
+    "rock": 3,
+    "rnb": 3,
+    "edm": 3,
+    "hiphop": 3
+  },
+  "personality": {
+    "assertiveness": 3,
+    "playfulness": 3,
+    "perfectionism": 3,
+    "emotionalOpenness": 3,
+    "competitiveness": 3
+  },
+  "vocalStyle": {
+    "range": "",
+    "tone": "",
+    "techniques": [],
+    "signature": ""
+  },
+  "lyricPatterns": {
+    "preferredStructures": [],
+    "syllableDensity": "mid",
+    "rhymeStyle": "",
+    "themes": [],
+    "sampleLines": []
+  },
+  "aesthetic": "",
+  "backstory": ""
+}

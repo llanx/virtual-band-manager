@@ -1,0 +1,184 @@
+{
+  "bandName": "PlaceholderBandName",
+  "concept": "A 4-member all-girl band where every member sings but each brings a distinct instrumental identity and musical sensibility. Their sound fuses alt-pop, rock, and R&B into something cohesive yet unpredictable.",
+  "formed": "2026-03-09",
+  "members": [
+    {
+      "id": "serena",
+      "name": "Serena",
+      "stageName": "SERENA",
+      "age": 22,
+      "instrument": "vocals",
+      "role": "leader",
+      "position": "main-vocal",
+      "genrePreferences": {
+        "pop": 5,
+        "rnb": 4,
+        "soul": 4,
+        "rock": 3,
+        "indie": 3,
+        "edm": 2,
+        "hiphop": 2
+      },
+      "personality": {
+        "assertiveness": 4,
+        "playfulness": 3,
+        "perfectionism": 5,
+        "emotionalOpenness": 4,
+        "competitiveness": 3
+      },
+      "vocalStyle": {
+        "range": "mezzo-soprano",
+        "tone": "warm, rich, powerful",
+        "techniques": ["belting", "runs", "falsetto", "vibrato", "whisper-to-crescendo"],
+        "signature": "Emotionally devastating chorus deliveries that make you feel everything"
+      },
+      "lyricPatterns": {
+        "preferredStructures": ["ABAB", "AABB"],
+        "syllableDensity": "mid",
+        "rhymeStyle": "clean rhymes, emotional emphasis over cleverness",
+        "themes": ["love", "heartbreak", "empowerment", "vulnerability", "self-discovery"],
+        "sampleLines": [
+          "I gave you every note I had to give",
+          "Watch me burn so bright they can't look away"
+        ]
+      },
+      "aesthetic": "Elegant but approachable. Gold accents, flowing fabrics, warm stage lighting. Commands the stage without trying.",
+      "backstory": "The emotional core of the band. Trained classically but fell in love with pop and soul. Her voice is the anchor that ties the group's diverse influences together. Carries the pressure of being the frontwoman but channels it into raw performance."
+    },
+    {
+      "id": "kaia",
+      "name": "Kaia",
+      "stageName": "KAIA",
+      "age": 21,
+      "instrument": "guitar",
+      "role": "member",
+      "position": "vocalist",
+      "genrePreferences": {
+        "rock": 5,
+        "indie": 5,
+        "alternative": 4,
+        "punk": 3,
+        "pop": 3,
+        "grunge": 3,
+        "edm": 1
+      },
+      "personality": {
+        "assertiveness": 4,
+        "playfulness": 2,
+        "perfectionism": 4,
+        "emotionalOpenness": 2,
+        "competitiveness": 4
+      },
+      "vocalStyle": {
+        "range": "alto",
+        "tone": "raspy, raw, slightly husky",
+        "techniques": ["gritty delivery", "talk-singing", "harmonies", "power chords while singing"],
+        "signature": "Growling into a guitar riff that hits you in the chest"
+      },
+      "lyricPatterns": {
+        "preferredStructures": ["AABB", "freeform"],
+        "syllableDensity": "mid-high",
+        "rhymeStyle": "internal rhyme, hard consonants, punchy",
+        "themes": ["rebellion", "independence", "frustration", "fire imagery", "freedom"],
+        "sampleLines": [
+          "Burn the script, I'll write my own",
+          "Feedback screaming like a battle cry"
+        ]
+      },
+      "aesthetic": "Leather jackets, ripped denim, dark eyeliner. Moves like she doesn't care if you're watching (but she knows you are).",
+      "backstory": "Self-taught guitarist who grew up on classic rock and grunge. She's the edge in the band's sound -- the reason they're not just another pop group. Quiet offstage but explosive on it. Pushes back when the sound gets too safe."
+    },
+    {
+      "id": "mika",
+      "name": "Mika",
+      "stageName": "MIKA",
+      "age": 20,
+      "instrument": "drums",
+      "role": "member",
+      "position": "vocalist",
+      "genrePreferences": {
+        "hiphop": 4,
+        "edm": 4,
+        "pop": 4,
+        "trap": 3,
+        "rock": 3,
+        "rnb": 3,
+        "funk": 3
+      },
+      "personality": {
+        "assertiveness": 3,
+        "playfulness": 5,
+        "perfectionism": 3,
+        "emotionalOpenness": 4,
+        "competitiveness": 3
+      },
+      "vocalStyle": {
+        "range": "soprano",
+        "tone": "bright, percussive, energetic",
+        "techniques": ["rhythmic delivery", "sing-rap", "chanting", "call-and-response", "hype ad-libs"],
+        "signature": "Turning a verse into a rhythmic chant that makes the crowd move"
+      },
+      "lyricPatterns": {
+        "preferredStructures": ["AABB", "freeform"],
+        "syllableDensity": "high",
+        "rhymeStyle": "multisyllabic, percussive, internal",
+        "themes": ["energy", "momentum", "rhythm", "heartbeat", "unstoppable force"],
+        "sampleLines": [
+          "Hit the kick, hit the snare, hit repeat",
+          "Every beat a step, every step a spark"
+        ]
+      },
+      "aesthetic": "Colorful streetwear, sneakers, always moving. Bandanas and wristbands. Radiates hype energy even standing still.",
+      "backstory": "Started drumming on pots and pans at age 5. Her rhythmic instincts bleed into everything -- the way she talks, walks, writes lyrics. She's the band's energy source and peacemaker. When the vibe dips, Mika brings it back."
+    },
+    {
+      "id": "evie",
+      "name": "Evie",
+      "stageName": "EVIE",
+      "age": 21,
+      "instrument": "bass",
+      "role": "member",
+      "position": "vocalist",
+      "genrePreferences": {
+        "rnb": 5,
+        "soul": 5,
+        "funk": 4,
+        "jazz": 3,
+        "pop": 3,
+        "indie": 3,
+        "hiphop": 2
+      },
+      "personality": {
+        "assertiveness": 2,
+        "playfulness": 3,
+        "perfectionism": 4,
+        "emotionalOpenness": 3,
+        "competitiveness": 2
+      },
+      "vocalStyle": {
+        "range": "contralto",
+        "tone": "smooth, velvety, cool",
+        "techniques": ["low harmonies", "breathy verses", "groove-locked phrasing", "subtle runs"],
+        "signature": "A bassline vocal that sits in your chest and won't leave"
+      },
+      "lyricPatterns": {
+        "preferredStructures": ["ABCB", "ABAB"],
+        "syllableDensity": "low-mid",
+        "rhymeStyle": "slant rhyme, assonance, flowing",
+        "themes": ["groove", "late nights", "cool confidence", "depth", "undercurrents"],
+        "sampleLines": [
+          "Low and slow, let the bassline breathe",
+          "You feel me before you hear me coming"
+        ]
+      },
+      "aesthetic": "Minimalist cool. Dark tones, clean lines, silver jewelry. The one who looks effortlessly stylish without trying. Sunglasses indoors.",
+      "backstory": "Jazz-trained bassist who discovered R&B and never looked back. She's the groove foundation -- when Evie locks in, the whole band feels it. Quiet and observant, she speaks through her instrument more than words. Her cool exterior hides a deeply musical soul."
+    }
+  ],
+  "dynamics": {
+    "coreTension": "Kaia pushes for rawer, edgier sound while Serena gravitates toward polished emotional delivery. Evie mediates with groove that works for both. Mika just wants everyone to feel the beat.",
+    "songwritingProcess": "Serena usually starts with a melody or emotional hook. Kaia builds a riff around it. Mika finds the rhythm. Evie locks in the groove. Then they argue about whether it needs more edge or more heart.",
+    "groupIdentity": "Four distinct voices that somehow blend into something none of them could make alone. Alt-pop with rock teeth, R&B soul, and rhythmic backbone."
+  }
+}
