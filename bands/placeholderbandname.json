@@ -44,7 +44,15 @@
         ]
       },
       "aesthetic": "Elegant but approachable. Gold accents, flowing fabrics, warm stage lighting. Commands the stage without trying.",
-      "backstory": "The emotional core of the band. Trained classically but fell in love with pop and soul. Her voice is the anchor that ties the group's diverse influences together. Carries the pressure of being the frontwoman but channels it into raw performance."
+      "backstory": "The emotional core of the band. Trained classically but fell in love with pop and soul. Her voice is the anchor that ties the group's diverse influences together. Carries the pressure of being the frontwoman but channels it into raw performance.",
+      "sunoPersona": {
+        "seedPrompt": "powerful female pop, warm rich vocals, soulful belting, gospel-tinged runs, emotional delivery",
+        "personaName": "",
+        "sunoLabel": "Singer A",
+        "effectiveVocalTags": ["warm powerful female vocal", "soulful belting", "emotional delivery", "vocal runs"],
+        "genrePairing": "pop, soul, R&B",
+        "notes": "Style Influence 75%+. Weirdness low. This is the anchor voice — generate chorus sections with this Persona."
+      }
     },
     {
       "id": "kaia",
@@ -87,7 +95,15 @@
         ]
       },
       "aesthetic": "Leather jackets, ripped denim, dark eyeliner. Moves like she doesn't care if you're watching (but she knows you are).",
-      "backstory": "Self-taught guitarist who grew up on classic rock and grunge. She's the edge in the band's sound -- the reason they're not just another pop group. Quiet offstage but explosive on it. Pushes back when the sound gets too safe."
+      "backstory": "Self-taught guitarist who grew up on classic rock and grunge. She's the edge in the band's sound -- the reason they're not just another pop group. Quiet offstage but explosive on it. Pushes back when the sound gets too safe.",
+      "sunoPersona": {
+        "seedPrompt": "female indie rock, raw husky alto vocals, raspy gritty delivery, talk-singing, electric guitar edge",
+        "personaName": "",
+        "sunoLabel": "Singer B",
+        "effectiveVocalTags": ["raspy female vocal", "gritty delivery", "husky alto", "talk-singing"],
+        "genrePairing": "indie rock, alternative, grunge",
+        "notes": "Genre pairing is critical — rock/indie genres naturally pull a grittier voice. Include guitar riff tags to reinforce identity."
+      }
     },
     {
       "id": "mika",
@@ -130,7 +146,15 @@
         ]
       },
       "aesthetic": "Colorful streetwear, sneakers, always moving. Bandanas and wristbands. Radiates hype energy even standing still.",
-      "backstory": "Started drumming on pots and pans at age 5. Her rhythmic instincts bleed into everything -- the way she talks, walks, writes lyrics. She's the band's energy source and peacemaker. When the vibe dips, Mika brings it back."
+      "backstory": "Started drumming on pots and pans at age 5. Her rhythmic instincts bleed into everything -- the way she talks, walks, writes lyrics. She's the band's energy source and peacemaker. When the vibe dips, Mika brings it back.",
+      "sunoPersona": {
+        "seedPrompt": "female K-pop, bright energetic soprano, percussive sing-rap, chanting hype, rhythmic delivery",
+        "personaName": "",
+        "sunoLabel": "Singer C",
+        "effectiveVocalTags": ["bright energetic female vocal", "sing-rap", "percussive delivery", "chanting"],
+        "genrePairing": "K-pop, hip-hop, EDM, trap",
+        "notes": "EDM/trap genre pairing gives the most energetic vocal timbre. Good for rap verses and hype sections."
+      }
     },
     {
       "id": "evie",
@@ -173,7 +197,15 @@
         ]
       },
       "aesthetic": "Minimalist cool. Dark tones, clean lines, silver jewelry. The one who looks effortlessly stylish without trying. Sunglasses indoors.",
-      "backstory": "Jazz-trained bassist who discovered R&B and never looked back. She's the groove foundation -- when Evie locks in, the whole band feels it. Quiet and observant, she speaks through her instrument more than words. Her cool exterior hides a deeply musical soul."
+      "backstory": "Jazz-trained bassist who discovered R&B and never looked back. She's the groove foundation -- when Evie locks in, the whole band feels it. Quiet and observant, she speaks through her instrument more than words. Her cool exterior hides a deeply musical soul.",
+      "sunoPersona": {
+        "seedPrompt": "female R&B, smooth velvety low vocals, breathy intimate delivery, cool groove, bass-heavy production",
+        "personaName": "",
+        "sunoLabel": "Singer D",
+        "effectiveVocalTags": ["smooth velvety female vocal", "breathy delivery", "low intimate vocals", "cool groove"],
+        "genrePairing": "R&B, soul, funk, neo-soul",
+        "notes": "R&B/soul genre pairing is the strongest differentiator from the other voices. Keep production bass-heavy."
+      }
     }
   ],
   "dynamics": {

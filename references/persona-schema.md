@@ -131,6 +131,33 @@ All 5 traits are required. Integer values 1-5.
 | `aesthetic` | string | 1-2 sentences describing visual style, fashion, stage presence |
 | `backstory` | string | 2-3 sentences of character background that informs creative decisions |
 
+### Suno Persona
+
+```json
+"sunoPersona": {
+  "seedPrompt": "powerful female pop, warm rich vocals, soulful belting, gospel-tinged runs",
+  "personaName": "SERENA-v1",
+  "effectiveVocalTags": ["warm powerful female vocal", "soulful belting", "emotional delivery"],
+  "genrePairing": "pop, soul, R&B",
+  "notes": "Keep Weirdness slider low for consistency. Style Influence at 75%+."
+}
+```
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `seedPrompt` | string | yes | Suno style prompt used to generate the seed song for this Persona. Use texture descriptors (`warm`, `raspy`, `breathy`, `gritty`, `smooth`, `bright`, `velvety`) and delivery styles (`belting`, `talk-singing`, `sing-rap`) — NOT classical range terms (`mezzo-soprano`, `contralto`). |
+| `personaName` | string | no | Name of the saved Persona in Suno (once created). Empty until the user creates it. |
+| `sunoLabel` | string | yes | Generic singer label used in Suno output (e.g., `Singer A`, `Singer B`). Signals to Suno that this is a distinct vocalist. Assigned sequentially when members are added to the band. |
+| `effectiveVocalTags` | array[string] | yes | Bracket tags that reliably produce this voice in Suno. Used in Phase 4 output. |
+| `genrePairing` | string | yes | Genre(s) that naturally reinforce this vocal timbre. Critical — genre is Suno's strongest voice differentiator. |
+| `notes` | string | no | Suno generation tips (slider settings, things to avoid, known quirks). |
+
+**Important Suno constraints:**
+- All songs are generated as a single Suno generation — one script, one Persona selected, one paste
+- Use `sunoLabel` + `effectiveVocalTags` at section boundaries to nudge Suno toward different vocal deliveries within a single generation
+- The selected Persona sets the baseline voice; singer labels and texture tags create variation around it
+- Character names in brackets (`[SERENA:]`) do NOT work — use singer labels and vocal texture tags instead
+
 ---
 
 ## Validation Rules

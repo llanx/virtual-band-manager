@@ -34,5 +34,13 @@
     "sampleLines": []
   },
   "aesthetic": "",
-  "backstory": ""
+  "backstory": "",
+  "sunoPersona": {
+    "seedPrompt": "",
+    "personaName": "",
+    "sunoLabel": "",
+    "effectiveVocalTags": [],
+    "genrePairing": "",
+    "notes": ""
+  }
 }

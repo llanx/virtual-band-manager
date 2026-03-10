@@ -77,8 +77,9 @@ Write lyrics section by section, in each member's voice:
 
 - Each member's lines reflect their `lyricPatterns`, `personality`, and `vocalStyle` from the persona
 - Serena carries the most vocal weight (lead singer) but all members contribute
-- Mark line distribution with member tags: `(SERENA)`, `(KAIA)`, etc.
-- Mark harmonies: `(SERENA+EVIE)`, ad-libs: `(MIKA ad-lib)`
+- Mark line distribution with member tags: `[SERENA]`, `[KAIA]`, etc.
+- Mark harmonies: `[SERENA+EVIE]`, ad-libs: `[MIKA ad-lib]`
+- Use square brackets `[]` for ALL stage directions, performance notes, and member tags -- consistent with Suno's bracket notation. Member name tags get stripped in Phase 4, but bracket format carries through to Suno output.
 - Enforce thematic consistency with the concept brief
 - Ensure natural transitions between vocal styles at section boundaries
 
@@ -90,27 +91,36 @@ Lyric voice guidelines per instrument archetype:
 
 ### Step 7: Song Construction -- Phase 4 (Suno Tags)
 
-Convert the song into Suno bracket notation:
+Convert the Phase 3 lyrics into a single Suno-ready script. The output is one cohesive text that gets pasted directly into Suno's custom lyrics field in a single generation.
 
 1. Consult `references/suno-tag-reference.md` for valid bracket syntax
-2. Add structural tags: `[Verse 1]`, `[Chorus]`, `[Bridge]`, etc.
-3. Add vocal style tags from member personas: `[Powerful female vocal]`, `[Soft harmonies]`
-4. Add instrument tags: `[Electric guitar riff]`, `[Drum fill]`, `[Bass groove]`
-5. Add mood/energy tags from the concept: `[Building intensity]`, `[Dreamy]`
-6. Add transition tags where needed: `[Tempo change]`, `[Beat switch]`
-7. Strip member assignment tags (Suno doesn't use them)
-8. If the song exceeds ~3000 characters, split into segments with overlap guidance
+2. **Recommend a Persona**: Pick the member who dominates the song (usually Serena for chorus-heavy tracks). The user selects this Persona in Suno before generating.
+3. **Write the master genre/style line** as the first line of the script. This sets the overall production style and should blend the song's negotiated genre with the lead Persona's `genrePairing`. Example: `[Pop-rock, female vocals, energetic, 145 BPM]`
+4. **Convert each section** from Phase 3 lyrics:
+   a. Add structural tags: `[Verse 1]`, `[Chorus]`, `[Bridge]`, etc.
+   b. At each section boundary where the lead vocalist changes, add the member's `sunoLabel` + `effectiveVocalTags`. Example: `[Singer B, raspy female vocal, gritty delivery]`. This nudges Suno toward a different vocal delivery for that section.
+   c. Add instrument tags: `[Electric guitar riff]`, `[Drum fill]`, `[Bass groove]`
+   d. Add mood/energy tags from the concept: `[Building intensity]`, `[Aggressive]`
+   e. Strip ALL member name tags — replace with sunoLabels and vocal texture tags
+5. For shared/group sections (gang vocals, chants), use `[Group chant]`, `[All singers]`, or `[Layered vocals]` tags
+6. Keep tags to 2-4 per section — over-tagging causes Suno to ignore some
+7. If the script exceeds ~3000 characters, split into two segments with 2-4 lines of overlap at the boundary and `[Continuation]` tag on segment 2
 
-### Step 8: Song Construction -- Phase 5 (Assembly)
+### Step 8: Song Construction -- Phase 5 (Final Output)
 
 Compile the final output using `templates/song-output.md`:
 
 1. Include metadata: genre, BPM, duration, structure template used
-2. Include the concept brief (or summary)
-3. Include full lyrics with member assignment tags (for reference)
-4. Include Suno generation segments (bracket-tagged, ready to paste)
-5. Include generation notes (Suno settings tips, segment stitching guidance)
-6. Present to the user for final review
+2. Include singer label map (member → Singer A/B/C/D → voice profile)
+3. Include the concept brief (or summary)
+4. Include full lyrics with member assignment tags (for reference)
+5. Include the Suno-ready script (one script, ready to copy-paste)
+6. Include generation notes:
+   - Which Persona to select (or seed prompt if no Persona saved)
+   - Suno style field suggestion
+   - Slider recommendations (Style Influence, Weirdness)
+   - If split into segments: overlap lines and stitching notes
+7. Present to the user for final review
 
 ## Genre Negotiation
 
@@ -138,7 +148,8 @@ When simulating member reactions (pitches, negotiations, feedback on lyrics):
 
 - Always load the band file before any operation. If missing, offer to create from template
 - Never fabricate member details not present in the persona JSON. If a trait is unspecified, ask the user or mark as TBD
-- Song output must be copy-pasteable into Suno's custom lyrics field without modification
+- The final Suno script must be copy-pasteable into Suno's custom lyrics field without modification — one script, one generation
+- Use `sunoPersona.effectiveVocalTags` and `sunoLabel` for vocal style tags — never use classical range terms or character names in Suno output
 - Keep the pipeline interruptible -- the user can stop after any phase and resume later
 - All member changes save immediately to the band JSON file
 - When writing lyrics, respect each member's syllable density, rhyme style, and thematic preferences from their persona
@@ -152,6 +163,7 @@ For detailed guidance, consult:
 - **`references/genre-matrix.md`** -- Read during Phase 1 genre negotiation. Contains compatibility scores for 13 genre pairs and the blending algorithm
 - **`references/kpop-structures.md`** -- Read during Phase 2 structure selection. Contains 5 song structure templates with section durations and member distribution guidelines
 - **`references/suno-tag-reference.md`** -- Read during Phase 4. Contains complete Suno bracket notation syntax, valid tags, formatting rules, and segment splitting guidance
+- **`references/persona-schema.md` → Suno Persona section** -- Read during Phase 4. Documents `sunoPersona` fields, effective vocal tags, and singer labels
 - **`templates/blank-member.json`** -- Copy when creating a new band member
 - **`templates/song-concept-brief.md`** -- Fill during Phase 1 output
 - **`templates/song-output.md`** -- Fill during Phase 5 assembly
