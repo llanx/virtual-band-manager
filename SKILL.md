@@ -89,6 +89,20 @@ Lyric voice guidelines per instrument archetype:
 - **Drummer (Mika):** Rhythmic, percussive syllable patterns, punchy delivery
 - **Bassist (Evie):** Smooth, groove-oriented phrasing, laid-back cool
 
+### Bilingual Lyric Rules (English/Korean)
+
+- Target ratio: 75–80% English, 20–25% Korean across the full song
+- Korean placement — vary across the song using all three patterns:
+  - **Mid-line substitution**: swap a phrase or 2–4 words to Korean within an English line
+    e.g. `"I'm still running 달려가 through the fire"`
+  - **Full Korean line**: one complete line of a stanza written entirely in Korean
+  - **Stanza position rotation**: alternate which line carries the Korean — sometimes first, sometimes a middle line, sometimes the last
+- Rhyme constraint: any Korean word or phrase that falls at a rhyme point must end on a syllable whose romanized pronunciation rhymes with the English rhyme target of that stanza. Verify the match before finalizing the line.
+- In the member-tagged lyrics (Phase 3 output), place an English translation in parentheses immediately after every Korean phrase or line:
+  e.g. `[SERENA] 우리는 여기 있어 (we are still here) — don't you dare look away`
+  e.g. `[KAIA] Burn the script, 내 방식대로 (my own way), every chord a throne`
+- Do NOT include translations in the Suno-ready script (Phase 4).
+
 ### Step 7: Song Construction -- Phase 4 (Suno Tags)
 
 Convert the Phase 3 lyrics into a single Suno-ready script. The output is one cohesive text that gets pasted directly into Suno's custom lyrics field in a single generation.
@@ -102,6 +116,7 @@ Convert the Phase 3 lyrics into a single Suno-ready script. The output is one co
    c. Add instrument tags: `[Electric guitar riff]`, `[Drum fill]`, `[Bass groove]`
    d. Add mood/energy tags from the concept: `[Building intensity]`, `[Aggressive]`
    e. Strip ALL member name tags — replace with sunoLabels and vocal texture tags
+   f. Strip all parenthetical translation annotations — Korean characters pass through as-is, but remove any `(translation text)` that follows them. Do NOT add `[Korean]` or `[English]` language tags; Suno does not use them and they waste the tag budget.
 5. For shared/group sections (gang vocals, chants), use `[Group chant]`, `[All singers]`, or `[Layered vocals]` tags
 6. Keep tags to 2-4 per section — over-tagging causes Suno to ignore some
 7. If the script exceeds ~3000 characters, split into two segments with 2-4 lines of overlap at the boundary and `[Continuation]` tag on segment 2

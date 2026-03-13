@@ -61,7 +61,7 @@
       "age": 21,
       "instrument": "guitar",
       "role": "member",
-      "position": "vocalist",
+      "position": "vocalist-rapper",
       "genrePreferences": {
         "rock": 5,
         "indie": 5,
@@ -81,12 +81,12 @@
       "vocalStyle": {
         "range": "alto",
         "tone": "raspy, raw, slightly husky",
-        "techniques": ["gritty delivery", "talk-singing", "harmonies", "power chords while singing"],
-        "signature": "Growling into a guitar riff that hits you in the chest"
+        "techniques": ["gritty delivery", "talk-singing", "rap", "harmonies", "power chords while singing"],
+        "signature": "Spitting bars over her own guitar riff — the riff and the rap are the same weapon"
       },
       "lyricPatterns": {
         "preferredStructures": ["AABB", "freeform"],
-        "syllableDensity": "mid-high",
+        "syllableDensity": "high",
         "rhymeStyle": "internal rhyme, hard consonants, punchy",
         "themes": ["rebellion", "independence", "frustration", "fire imagery", "freedom"],
         "sampleLines": [
@@ -95,14 +95,14 @@
         ]
       },
       "aesthetic": "Leather jackets, ripped denim, dark eyeliner. Moves like she doesn't care if you're watching (but she knows you are).",
-      "backstory": "Self-taught guitarist who grew up on classic rock and grunge. She's the edge in the band's sound -- the reason they're not just another pop group. Quiet offstage but explosive on it. Pushes back when the sound gets too safe.",
+      "backstory": "Self-taught guitarist who grew up on classic rock and grunge. She's the edge in the band's sound -- the reason they're not just another pop group. Quiet offstage but explosive on it. Pushes back when the sound gets too safe. She's also the band's rapper — her bars hit with the same precision as her riffs.",
       "sunoPersona": {
-        "seedPrompt": "female indie rock, raw husky alto vocals, raspy gritty delivery, talk-singing, electric guitar edge",
+        "seedPrompt": "female indie rock, raw husky alto vocals, raspy gritty delivery, rap verses, talk-singing, electric guitar edge",
         "personaName": "",
         "sunoLabel": "Singer B",
-        "effectiveVocalTags": ["raspy female vocal", "gritty delivery", "husky alto", "talk-singing"],
+        "effectiveVocalTags": ["raspy female vocal", "gritty delivery", "rap delivery", "talk-singing"],
         "genrePairing": "indie rock, alternative, grunge",
-        "notes": "Genre pairing is critical — rock/indie genres naturally pull a grittier voice. Include guitar riff tags to reinforce identity."
+        "notes": "Genre pairing is critical — rock/indie genres naturally pull a grittier voice. Include guitar riff tags to reinforce identity. Use [fast rap] or [aggressive rap] Suno tags for Kaia's rap break sections."
       }
     },
     {

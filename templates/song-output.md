@@ -27,7 +27,7 @@
 
 ## Lyrics (with Member Assignments)
 
-Full lyrics with each line prefixed by member tag. These tags are for reference only -- strip before Suno submission.
+Full lyrics with each line prefixed by member tag. Korean phrases/lines include (English translation) in parentheses immediately after the Korean text. All member tags and translation annotations are for reference only -- strip both before Suno submission. Korean characters pass through to the Suno script as-is.
 
 ```
 [Intro]
