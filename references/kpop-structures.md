@@ -1,6 +1,6 @@
 # Song Structure Templates
 
-## Template 1: Standard Pop/K-pop (3:20 - 3:40)
+## Template 1: Standard Pop/K-pop (3:20 - 3:40) — 4/4
 
 ```
 [Intro]              8-12 bars    ~15s    Instrumental or vocal hook teaser
@@ -27,7 +27,7 @@
 
 ---
 
-## Template 2: Dance/EDM-Influenced (3:20 - 3:50)
+## Template 2: Dance/EDM-Influenced (3:20 - 3:50) — 4/4
 
 ```
 [Intro]              4-8 bars     ~10s    Beat intro or synth riff
@@ -54,7 +54,7 @@
 
 ---
 
-## Template 3: Rap/Hip-Hop Hybrid (3:10 - 3:40)
+## Template 3: Rap/Hip-Hop Hybrid (3:10 - 3:40) — 4/4
 
 ```
 [Intro]              4-8 bars     ~10s    Beat drop or spoken word
@@ -81,7 +81,7 @@
 
 ---
 
-## Template 4: Ballad / Emotional (3:40 - 4:30)
+## Template 4: Ballad / Emotional (3:40 - 4:30) — 4/4 or 6/8
 
 ```
 [Intro]              4-8 bars     ~15s    Piano, guitar, or strings -- sparse
@@ -109,7 +109,7 @@
 
 ---
 
-## Template 5: Short-Form / TikTok-Optimized (2:30 - 3:00)
+## Template 5: Short-Form / TikTok-Optimized (2:30 - 3:00) — 4/4
 
 ```
 [Chorus]             8 bars       ~20s    Hook first (the viral moment)
@@ -152,15 +152,15 @@ For game integration, each section type maps to gameplay energy:
 
 ## BPM Guidelines by Genre Blend
 
-| Primary Genre | Typical BPM Range | Sweet Spot |
-|--------------|-------------------|------------|
-| Pop | 100-130 | 115-120 |
-| Rock | 120-160 | 130-140 |
-| Indie | 100-140 | 110-125 |
-| R&B | 70-110 | 85-95 |
-| EDM / House | 120-135 | 128 |
-| Trap | 130-170 (half-time feel) | 140-150 |
-| Hip-Hop | 80-115 | 90-100 |
-| Ballad | 60-85 | 70-75 |
-| Punk | 150-200 | 170-180 |
-| Funk | 100-130 | 110-120 |
+| Primary Genre | Typical BPM Range | Sweet Spot | Common Keys |
+|--------------|-------------------|------------|-------------|
+| Pop | 100-130 | 115-120 | C major, G major, F major |
+| Rock | 120-160 | 130-140 | E minor, A minor, D major |
+| Indie | 100-140 | 110-125 | G major, D major, E minor |
+| R&B | 70-110 | 85-95 | Ab major, Bb major, Eb major |
+| EDM / House | 120-135 | 128 | A minor, F minor, C minor |
+| Trap | 130-170 (half-time feel) | 140-150 | C minor, D minor, F minor |
+| Hip-Hop | 80-115 | 90-100 | G minor, C minor, D minor |
+| Ballad | 60-85 | 70-75 | C major, G major, Eb major |
+| Punk | 150-200 | 170-180 | E major, A major, D major |
+| Funk | 100-130 | 110-120 | E minor, A minor, D minor |

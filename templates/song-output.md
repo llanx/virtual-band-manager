@@ -4,6 +4,7 @@
 
 - **Genre:** [primary / secondary / accent]
 - **BPM:** [target BPM]
+- **Key:** [key and scale]
 - **Duration:** [target duration]
 - **Structure:** [template name used]
 - **Game Target:** [biome/stage context, or "standalone"]
@@ -60,16 +61,34 @@ Full lyrics with each line prefixed by member tag. Korean phrases/lines include 
 
 ---
 
-## Suno-Ready Script
+## Suno-Ready Output
 
-Copy-paste this directly into Suno's custom lyrics field. Select the recommended Persona before generating.
+Two components: paste the **Style Prompt** into Suno's Style Prompt box, and the **Lyrics Script** into the Lyrics field. Select the recommended Persona before generating.
+
+### Style Prompt
+
+Paste this into Suno's **Style Prompt** box:
 
 ```
-[Genre tags, vocal style, BPM]
+<Genre, sub-genre, vocal type, mood/energy, BPM, key, production texture>
+```
 
+### Exclude Styles (Pro/Premier)
+
+Paste this into Suno's **Exclude Styles** field (optional):
+
+```
+<Styles to avoid, e.g., country twang, Auto-Tune, mumble rap>
+```
+
+### Lyrics Script
+
+Paste this into Suno's **Lyrics** field:
+
+```
 [Intro]
 [Instrument/mood tags]
-(instrumental)
+[Instrumental]
 
 [Verse 1]
 [Singer label, vocal texture tags, instrument tags]
@@ -95,15 +114,19 @@ Final lyrics here...
 [Ending tags]
 ```
 
-If split into segments due to character limit, Segment 2 starts with the genre tag repeated + `[Continuation]` + 2-4 overlap lines from Segment 1's ending.
+If split into segments due to character limit (5,000 chars per generation), Segment 2 starts with `[Continuation]` + 2-4 overlap lines from Segment 1's ending. Do NOT repeat genre in Segment 2 — genre lives in the Style Prompt box.
 
 ---
 
 ## Generation Notes
 
 - **Recommended Persona:** [member name] -- [persona name or seed prompt]
-- **Suno Style Field:** [suggested style description to paste into Suno's style field]
-- **Style Influence:** [percentage -- higher = closer to Persona voice]
-- **Weirdness:** [low/mid -- lower = more predictable/consistent]
+- **Style Prompt:** [the style prompt composed above, for easy reference]
+- **Exclude Styles:** [exclude styles suggestion, or "N/A"]
+- **Slider Combo:** [one of the following]
+  - Radio-ready: Style Influence 80%+, Weirdness low
+  - Experimental: Style Influence 50-70%, Weirdness mid-high
+  - Persona showcase: Style Influence 85%+, Weirdness low
+  - Genre fusion: Style Influence 60-75%, Weirdness mid
 - **Alternate Takes:** [any variations worth trying -- different Persona, stripped version, etc.]
 - **Known Quirks:** [anything that didn't work in test generations]

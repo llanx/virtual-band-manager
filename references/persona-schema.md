@@ -137,26 +137,29 @@ All 5 traits are required. Integer values 1-5.
 "sunoPersona": {
   "seedPrompt": "powerful female pop, warm rich vocals, soulful belting, gospel-tinged runs",
   "personaName": "SERENA-v1",
+  "sunoLabel": "Singer A",
   "effectiveVocalTags": ["warm powerful female vocal", "soulful belting", "emotional delivery"],
   "genrePairing": "pop, soul, R&B",
-  "notes": "Keep Weirdness slider low for consistency. Style Influence at 75%+."
+  "notes": "Keep Weirdness slider low for consistency. Style Influence at 75%+. Exclude Styles: country twang, Auto-Tune."
 }
 ```
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
-| `seedPrompt` | string | yes | Suno style prompt used to generate the seed song for this Persona. Use texture descriptors (`warm`, `raspy`, `breathy`, `gritty`, `smooth`, `bright`, `velvety`) and delivery styles (`belting`, `talk-singing`, `sing-rap`) — NOT classical range terms (`mezzo-soprano`, `contralto`). |
+| `seedPrompt` | string | yes | Suno style prompt used to generate the **seed song when creating this Persona** in Suno's Persona feature. This is NOT the per-song Style Prompt — each song gets its own Style Prompt composed in Phase 4. Use texture descriptors (`warm`, `raspy`, `breathy`, `gritty`, `smooth`, `bright`, `velvety`) and delivery styles (`belting`, `talk-singing`, `sing-rap`) — NOT classical range terms (`mezzo-soprano`, `contralto`). |
 | `personaName` | string | no | Name of the saved Persona in Suno (once created). Empty until the user creates it. |
 | `sunoLabel` | string | yes | Generic singer label used in Suno output (e.g., `Singer A`, `Singer B`). Signals to Suno that this is a distinct vocalist. Assigned sequentially when members are added to the band. |
 | `effectiveVocalTags` | array[string] | yes | Bracket tags that reliably produce this voice in Suno. Used in Phase 4 output. |
 | `genrePairing` | string | yes | Genre(s) that naturally reinforce this vocal timbre. Critical — genre is Suno's strongest voice differentiator. |
-| `notes` | string | no | Suno generation tips (slider settings, things to avoid, known quirks). |
+| `notes` | string | no | Suno generation tips (slider settings, things to avoid, known quirks). Include Exclude Styles guidance if this Persona has known anti-styles. Example: `"Keep Weirdness slider low for consistency. Style Influence at 75%+. Exclude Styles: country twang, Auto-Tune."` |
 
 **Important Suno constraints:**
-- All songs are generated as a single Suno generation — one script, one Persona selected, one paste
+- All songs are generated as a single Suno generation — one Persona selected, Style Prompt in the Style Prompt box, lyrics script in the Lyrics field
+- Genre, BPM, and key go in the **Style Prompt box**, NOT in the Lyrics field. Do not duplicate these in bracket tags within lyrics
 - Use `sunoLabel` + `effectiveVocalTags` at section boundaries to nudge Suno toward different vocal deliveries within a single generation
 - The selected Persona sets the baseline voice; singer labels and texture tags create variation around it
 - Character names in brackets (`[SERENA:]`) do NOT work — use singer labels and vocal texture tags instead
+- Parentheses `()` in lyrics produce **backing vocal layers** — never use them for instructions like `(instrumental)` or `(whispered)`. Use bracket tags instead: `[Instrumental]`, `[Whispered]`
 
 ---
 
