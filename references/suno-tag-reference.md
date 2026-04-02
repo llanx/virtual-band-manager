@@ -288,7 +288,9 @@ Control production and arrangement elements.
 | `[Key change]` | Modulation (usually up for final chorus) |
 | `[Fade out]` | Gradual volume decrease |
 | `[Hard stop]` | Abrupt ending |
-| `[Sudden silence]` | All instruments cut |
+| `[Sudden silence]` | All instruments cut -- dramatic moment |
+| `[Break]` | Non-vocal pause -- instruments may continue softly |
+| `[Pause]` | Brief pause -- Suno decides duration |
 | `[Slow build]` | Gradual layering of elements |
 | `[Dynamic contrast]` | Loud-quiet-loud shifts |
 
@@ -647,6 +649,23 @@ Each line of lyrics should be its own line. Suno interprets line breaks as phras
 - **ALL CAPS sparingly**: Only 1-3 words at a time for emphasis. Entire lines in caps produce unpredictable results
 - **Repetition**: If you want a line repeated, write it out multiple times — don't use "x2" notation
 - **Member names**: Strip all member assignment tags before submitting to Suno. Suno doesn't know who SERENA or KAIA are
+- **Pause duration**: Avoid `[Pause X seconds]` or `[Silence Xs]` with specific durations -- Suno treats these as vague suggestions at best. For precise silence, add it in post-production
+
+### Pause & Silence Guide
+
+Suno does not support exact timed pauses. Use these techniques by intent:
+
+| Intent | Tag / Technique | Notes |
+|--------|----------------|-------|
+| Brief vocal hesitation | `...` (ellipsis in lyrics) | Most reliable micro-pause |
+| Structural break (no vocals) | `[Break]` or `[Instrumental Break]` | Clean non-vocal section |
+| Dramatic all-instruments-cut | `[Sudden silence]` | Works for tension moments |
+| Force near-silence | `[Break: Silence, Acapella, Whispered]` | Community "anti-drop" stack -- stronger than `[Silence]` alone |
+| Strip back instrumentation | `[Breakdown]` | Reduces layers, near-quiet feel |
+| Abrupt song ending | `[Hard stop]` | Song-ending only |
+| Generic pause | `[Pause]` | No duration -- Suno decides length |
+
+**Tip:** Always follow a silence/pause tag with a clear re-entry cue (section tag, instrument tag, or vocal tag) so Suno knows how to resume.
 
 ---
 
@@ -680,7 +699,7 @@ MOOD:        [Energetic] [Melancholic] [Aggressive] [Dreamy] [Dark] [Triumphant]
              [Intimate] [Anthemic] [Euphoric] [Haunting] [Nostalgic] [Playful]
              [Cinematic] [Gritty] [Ethereal] [Serene] [Defiant] [Chaotic]
 
-ENERGY:      [Building intensity] [Sudden silence] [Explosive] [Tension] [Swagger]
+ENERGY:      [Building intensity] [Sudden silence] [Break] [Explosive] [Tension] [Swagger]
 
 PRODUCTION:  [Stripped back] [Full band] [A cappella] [Instrumental] [Minimalist]
              [Crescendo] [Decrescendo] [Key change] [Tempo change]

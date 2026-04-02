@@ -19,6 +19,8 @@ Complete documentation for the band member JSON profile format.
 | `coreTension` | string | Primary creative tension that drives interesting negotiations |
 | `songwritingProcess` | string | How the band typically approaches writing together |
 | `groupIdentity` | string | What makes this group's sound unique as a unit |
+| `combatFormation` | string | (optional) How the team positions and coordinates in combat — mirrors their musical roles |
+| `combatTension` | string | (optional) Interpersonal friction that emerges in combat, driven by personality traits |
 
 ---
 
@@ -160,6 +162,38 @@ All 5 traits are required. Integer values 1-5.
 - The selected Persona sets the baseline voice; singer labels and texture tags create variation around it
 - Character names in brackets (`[SERENA:]`) do NOT work — use singer labels and vocal texture tags instead
 - Parentheses `()` in lyrics produce **backing vocal layers** — never use them for instructions like `(instrumental)` or `(whispered)`. Use bracket tags instead: `[Instrumental]`, `[Whispered]`
+
+### Fantasy Profile (optional)
+
+For bands with a fantasy/game identity (e.g., demon hunters, dungeon crawlers), each member can have a `fantasyProfile` that maps their musician identity to a D&D-style combat class. The fantasy profile should **mirror and extend** the member's existing personality traits — combat behavior is personality under pressure.
+
+```json
+"fantasyProfile": {
+  "class": "fire-mage",
+  "title": "The Inferno Conductor",
+  "weapon": "Microphone wand — she sings incantations, her voice IS the spell.",
+  "fightingStyle": "Mid-range caster who stays centered and orchestrates the team.",
+  "combatPersonality": "Perfectionism (5) means every spell is precise...",
+  "signature": "Crescendo Blaze — a held note that spirals fire upward...",
+  "weakness": "Overextends when emotionally overwhelmed..."
+}
+```
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `class` | string | yes | D&D-style class identifier (e.g., `fire-mage`, `barbarian`, `rogue`, `archer`, `paladin`, `necromancer`) |
+| `title` | string | yes | Flavor title that combines their class and musical identity (e.g., "The Spectral Bowstring", "The Rhythmic Shadow") |
+| `weapon` | string | yes | Description of their instrument-weapon hybrid — how the instrument transforms or doubles as a weapon |
+| `fightingStyle` | string | yes | 1-3 sentences on combat approach: range, tactics, role in the team. Should reflect their instrument identity and personality |
+| `combatPersonality` | string | yes | How their personality trait scores (assertiveness, playfulness, etc.) manifest in battle. Reference specific trait values |
+| `signature` | string | yes | Their signature move or ability — named, described, and tied to their musical technique |
+| `weakness` | string | yes | A combat vulnerability that mirrors a personality gap or low trait score. Makes the character feel real and creates narrative tension |
+
+**Design guidelines:**
+- The weapon should feel like a natural extension of the instrument, not a separate object
+- Fighting style should mirror musical role (vocalist = caster/commander, guitarist = melee bruiser, drummer = speed/flanker, bassist = precision/support)
+- Signature moves should reference musical techniques (crescendo, power chord, paradiddle, bass drop)
+- Weaknesses should create opportunities for team dependency — the same flaw that limits them in combat should be something another member compensates for
 
 ---
 

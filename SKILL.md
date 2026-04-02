@@ -21,6 +21,8 @@ A band manager brain that knows who the members are, what they sound like, what 
 
 Read the band profile from `bands/` directory. If no band file exists, offer to create one using the member management workflow. Present a brief roster summary: member names, instruments, roles, and genre leanings.
 
+**Song DNA Registry check:** If `references/song-dna-registry.md` exists, ask the user whether they want to use it for this session. If they decline, skip all registry references throughout the pipeline (Phases 1, 3, and 5) -- this allows free creation without pattern constraints. If the file does not exist, do not ask and do not create it.
+
 ### Step 2: Select Mode
 
 Offer three modes based on user intent:
@@ -53,11 +55,15 @@ Offer three modes based on user intent:
 Gather the song's creative direction:
 
 1. Ask for song intent -- mood, theme, narrative purpose, energy level
-2. Optionally ask for game context (which biome/stage, BPM range, gameplay energy)
-3. Run genre negotiation (see Genre Negotiation section below)
-4. Each member "pitches" the concept in 1-2 sentences reflecting their personality
-5. Produce a concept brief using `templates/song-concept-brief.md`
-6. **Confirm the concept brief with the user before proceeding**
+2. If the Song DNA Registry is active for this session, consult `references/song-dna-registry.md`:
+   - Review the Song Fingerprints table -- identify what imagery, emotions, and devices are already "owned" by existing songs
+   - Review the Pattern Frequency Tracker -- flag any `[SATURATED]` patterns to the user and steer the concept away from them
+   - If the user's requested theme overlaps heavily with an existing song, surface the overlap and suggest differentiation angles
+3. Optionally ask for game context (which biome/stage, BPM range, gameplay energy)
+4. Run genre negotiation (see Genre Negotiation section below)
+5. Each member "pitches" the concept in 1-2 sentences reflecting their personality
+6. Produce a concept brief using `templates/song-concept-brief.md`
+7. **Confirm the concept brief with the user before proceeding**
 
 ### Step 5: Song Construction -- Phase 2 (Structure)
 
@@ -73,6 +79,11 @@ Select and adapt a song structure:
 
 ### Step 6: Song Construction -- Phase 3 (Lyrics)
 
+If the Song DNA Registry is active for this session, consult `references/song-dna-registry.md` before writing:
+- Do NOT use any pattern marked `[SATURATED]` unless the user explicitly approves reuse for this song
+- For patterns marked `[WATCH]`, use at most one per song, and vary the execution (different placement, different member, different context)
+- Actively seek fresh alternatives for: backing vocal textures, breakdown structures, Korean phrase choices, and rhyme targets
+
 Write lyrics section by section, in each member's voice:
 
 - Each member's lines reflect their `lyricPatterns`, `personality`, and `vocalStyle` from the persona
@@ -80,6 +91,7 @@ Write lyrics section by section, in each member's voice:
 - Mark line distribution with member tags: `[SERENA]`, `[KAIA]`, etc.
 - Mark harmonies: `[SERENA+EVIE]`, ad-libs: `[MIKA ad-lib]`
 - Use square brackets `[]` for ALL stage directions, performance notes, and member tags -- consistent with Suno's bracket notation. Member name tags get stripped in Phase 4, but bracket format carries through to Suno output.
+- For pauses and silence, consult the Pause & Silence Guide in `references/suno-tag-reference.md`. Use `[Break]` for structural pauses, `[Sudden silence]` for dramatic cuts, and `...` for vocal hesitation. Avoid specifying exact durations -- Suno does not reliably respect them.
 - Enforce thematic consistency with the concept brief
 - Ensure natural transitions between vocal styles at section boundaries
 
@@ -102,6 +114,42 @@ Lyric voice guidelines per instrument archetype:
   e.g. `[SERENA] 우리는 여기 있어 (we are still here) — don't you dare look away`
   e.g. `[KAIA] Burn the script, 내 방식대로 (my own way), every chord a throne`
 - Do NOT include translations in the Suno-ready script (Phase 4).
+
+### Step 6b: Song Construction -- Phase 3.5 (Lyric Review)
+
+After completing Phase 3 lyrics, present the following review matrix to the user. This is a suggestion output -- the user decides which (if any) items to address before moving to Phase 4.
+
+#### A. Lyric Logic Review
+
+Scan the completed lyrics and surface any potential issues:
+
+| Check | What to flag |
+|-------|-------------|
+| Thematic coherence | Lines that contradict or drift from the concept brief |
+| Logical flow | Non-sequiturs between consecutive lines within a section |
+| Mixed metaphors | Incompatible metaphors colliding in the same section |
+| Awkward phrasing | Lines that sound unnatural or are contorted to force a rhyme |
+| Emotional arc | Lines that undermine their section's intended mood |
+| Member voice | Lines that feel out-of-character for the assigned member's persona |
+| Korean integration | Korean phrases that feel forced or have inaccurate translations |
+
+Present findings in a numbered table: line, issue, and a suggested alternative. If nothing is flagged, say so and move on.
+
+#### B. Rhyme Review
+
+Scan line-ending words and identify rhyme pairs within each section:
+
+1. Flag any **same-word rhymes** (e.g., face/face) -- present for user approval
+2. Flag any **identity rhymes with different meaning** (e.g., rock/rock as stone vs. music) -- note the dual meaning for user consideration
+3. For any flagged pair, suggest 2-3 alternative words that preserve the line's meaning
+4. Do NOT flag slant rhymes or near-rhymes -- these are legitimate technique
+
+Present as a simple approval matrix:
+
+| Line # | Rhyme pair | Type | Suggestion | Keep? |
+|--------|-----------|------|------------|-------|
+
+The user marks which to keep or revise, then proceed to Phase 4.
 
 ### Step 7: Song Construction -- Phase 4 (Suno Tags)
 
@@ -142,6 +190,12 @@ Compile the final output using `templates/song-output.md`:
      - **Genre fusion**: Style Influence 60-75%, Weirdness mid
    - If split into segments: overlap lines and stitching notes
 7. Present to the user for final review
+8. If the Song DNA Registry is active for this session, update `references/song-dna-registry.md`:
+   a. Add the new song to the Song Fingerprints table
+   b. Scan the finalized lyrics for all tracked pattern categories
+   c. Update pattern counts, track lists, and Status flags
+   d. Add any new patterns not yet tracked
+   e. Recalculate statuses: 1 use = `OK`, 2 = `[WATCH]`, 3+ = `[SATURATED]`
 
 ## Genre Negotiation
 
@@ -188,3 +242,5 @@ For detailed guidance, consult:
 - **`templates/blank-member.json`** -- Copy when creating a new band member
 - **`templates/song-concept-brief.md`** -- Fill during Phase 1 output
 - **`templates/song-output.md`** -- Fill during Phase 5 assembly
+- **`references/song-dna-registry.md`** -- Read during Phase 1 (concept differentiation) and Phase 3 (lyric pattern avoidance). Update during Phase 5. Tracks imagery, structural devices, Korean usage, rhyme targets, ad-libs, and breakdown patterns across all songs. Flags patterns as `OK` / `[WATCH]` / `[SATURATED]` based on reuse frequency
+- **Step 6b (Lyric Review)** -- Optional review matrix after Phase 3. Surfaces logic issues and same-word rhymes for user consideration

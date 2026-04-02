@@ -52,6 +52,15 @@
         "effectiveVocalTags": ["warm powerful female vocal", "soulful belting", "emotional delivery", "vocal runs"],
         "genrePairing": "pop, soul, R&B",
         "notes": "Style Influence 75%+. Weirdness low. This is the anchor voice — generate chorus sections with this Persona."
+      },
+      "fantasyProfile": {
+        "class": "fire-mage",
+        "title": "The Inferno Conductor",
+        "weapon": "Microphone wand — she sings incantations, her voice IS the spell. The mic glows ember-orange when she channels, white-hot at full power. Vocal runs trace fire sigils in the air.",
+        "fightingStyle": "Mid-range caster who stays centered and orchestrates the team. Her choruses are AoE fire attacks — the bigger the note, the wider the blast. Whisper-to-crescendo technique charges a spell from ember to inferno. She doesn't dodge, she controls the space around her.",
+        "combatPersonality": "Commands the battlefield the way she commands the stage — perfectionism (5) means every spell is precise, never a wasted flame. Assertiveness (4) keeps the team in formation. Emotional openness (4) is her fuel source — the deeper she feels, the hotter she burns. She carries the weight of being the frontline voice and the team's tactical anchor.",
+        "signature": "Crescendo Blaze — she builds a held note from whisper to full belt, fire spiraling upward with each octave, then releases a radial inferno that scorches everything in range. The longer the buildup, the more devastating the release.",
+        "weakness": "Overextends when emotionally overwhelmed. The same raw vulnerability that makes her performances devastating can shatter her control — grief, rage, or heartbreak turns precise spellwork into wildfire. When she loses the melody, she loses the flame's direction."
       }
     },
     {
@@ -103,6 +112,15 @@
         "effectiveVocalTags": ["raspy female vocal", "gritty delivery", "rap delivery", "talk-singing"],
         "genrePairing": "indie rock, alternative, grunge",
         "notes": "Genre pairing is critical — rock/indie genres naturally pull a grittier voice. Include guitar riff tags to reinforce identity. Use [fast rap] or [aggressive rap] Suno tags for Kaia's rap break sections."
+      },
+      "fantasyProfile": {
+        "class": "barbarian",
+        "title": "The Greatsword",
+        "weapon": "An oversized Guts-style greatsword that manifests when she plays power chords on her guitar. The blade resonates with distortion — heavier the riff, heavier the swing. The guitar and the sword are the same thing; she just decides which edge to hit you with.",
+        "fightingStyle": "Close-range bruiser with relentless pressure. Each strike is timed like a downbeat — deliberate, devastating, rhythmic. She doesn't flail; even her rage has technique. Charges first, asks questions never. Her guitar riffs are war cries that fuel her swings — faster riffs mean faster combos.",
+        "combatPersonality": "Assertiveness (4) and competitiveness (4) put her on the front line every time — she needs to be first in and last standing. Perfectionism (4) means her brutality is precise, Guts-style calculated fury. Playfulness (2) means zero jokes in combat — dead serious, jaw clenched, eyes locked. Emotional openness (2) means the rage runs deep but she'll never tell you why.",
+        "signature": "Downbeat Cleave — she plants her feet, rips a power chord that shakes the ground, and brings the greatsword down in a vertical strike that splits the earth in a line. The shockwave travels with the distortion. One chord, one kill.",
+        "weakness": "Won't ask for help and won't retreat. Her low emotional openness means she absorbs damage she doesn't need to — she'd rather bleed than admit she's in trouble. The same stubbornness that makes her an unstoppable force makes her a terrible patient."
       }
     },
     {
@@ -154,6 +172,15 @@
         "effectiveVocalTags": ["bright energetic female vocal", "sing-rap", "percussive delivery", "chanting"],
         "genrePairing": "K-pop, hip-hop, EDM, trap",
         "notes": "EDM/trap genre pairing gives the most energetic vocal timbre. Good for rap verses and hype sections."
+      },
+      "fantasyProfile": {
+        "class": "rogue",
+        "title": "The Rhythmic Shadow",
+        "weapon": "Twin drumsticks that transform into daggers mid-motion — she flips between percussion and stabbing in the same rhythmic pattern. The sticks click when sheathed, flash steel when drawn. She doesn't stop moving long enough for you to tell which mode she's in.",
+        "fightingStyle": "Speed and rhythm-based. She finds the enemy's tempo and disrupts it — syncopated strikes that land between their defenses. Fights in paradiddle patterns: feint-feint-strike-strike. The band's flanker, always circling, always moving, always grinning. She turns combat into choreography.",
+        "combatPersonality": "Playfulness (5) means she fights like it's a game — unpredictable movement, trash talk, laughing mid-dodge. Emotional openness (4) lets her read opponents and exploit hesitation. Assertiveness (3) means she picks her moments instead of forcing them. She's the peacemaker offstage and the chaos agent on the battlefield.",
+        "signature": "Paradiddle Rush — a blinding flurry of alternating drumstick-dagger strikes in a RLRR-LRLL pattern, each hit building speed until the rhythm becomes a blur. The final strike is always the one you didn't see coming — the off-hand dagger from the blind side.",
+        "weakness": "Gets cocky when she's winning. Her playfulness (5) means she drops her guard because she's having too much fun — she'll showboat a dodge or add an unnecessary spin. The moment she starts enjoying herself too much is the moment she catches a hit she should have blocked."
       }
     },
     {
@@ -205,12 +232,23 @@
         "effectiveVocalTags": ["smooth velvety female vocal", "breathy delivery", "low intimate vocals", "cool groove"],
         "genrePairing": "R&B, soul, funk, neo-soul",
         "notes": "R&B/soul genre pairing is the strongest differentiator from the other voices. Keep production bass-heavy."
+      },
+      "fantasyProfile": {
+        "class": "archer",
+        "title": "The Spectral Bowstring",
+        "weapon": "Her bass guitar doubles as a longbow — the four strings become the bowstring, and spectral arrows form from low-frequency vibrations. Lower the note, more devastating the arrow. She plucks a string and the air splits. The bass hums between shots like a held breath.",
+        "fightingStyle": "Long-range precision. She hangs back, reads the whole field, and picks shots that end fights before they escalate. Every arrow is deliberate — no suppressive fire, no panic shots. She anchors the team's sight lines while the others close distance. Her bass notes rumble through the ground before the arrow arrives, so demons feel her before they see her.",
+        "combatPersonality": "Assertiveness (2) keeps her in the back line — she doesn't need to be in front to control the fight. Perfectionism (4) means every arrow is a statement, never wasted. Emotional openness (3) lets her read the battlefield but she keeps her own position hidden. Competitiveness (2) means she doesn't care about kill counts — she cares about the clean shot. She's the one who sees the ambush before it happens.",
+        "signature": "Subsonic Requiem — she plays a deep, sustained bass note that vibrates below human hearing, charging a single spectral arrow until it glows violet-black. When she releases, the arrow travels silently and detonates on impact with a low-frequency shockwave that shatters everything in a cone behind the target. One shot. No encore.",
+        "weakness": "Hesitates when forced into close range. Her cool detachment is a long-distance luxury — when the fight gets personal and the enemy is in her face, that calm cracks. She's the quiet observer, not the brawler, and melee combat strips away everything that makes her dangerous."
       }
     }
   ],
   "dynamics": {
     "coreTension": "Kaia pushes for rawer, edgier sound while Serena gravitates toward polished emotional delivery. Evie mediates with groove that works for both. Mika just wants everyone to feel the beat.",
     "songwritingProcess": "Serena usually starts with a melody or emotional hook. Kaia builds a riff around it. Mika finds the rhythm. Evie locks in the groove. Then they argue about whether it needs more edge or more heart.",
-    "groupIdentity": "Four distinct voices that somehow blend into something none of them could make alone. Alt-pop with rock teeth, R&B soul, and rhythmic backbone."
+    "groupIdentity": "Four distinct voices that somehow blend into something none of them could make alone. Alt-pop with rock teeth, R&B soul, and rhythmic backbone.",
+    "combatFormation": "Serena holds center as the tactical anchor — her fire spells control space and she calls targets. Kaia charges the front line, drawing aggro and cleaving through anything that gets close. Mika flanks wide, disrupting enemy rhythm and picking off stragglers from blind angles. Evie hangs back and sees the whole field — her spectral arrows end threats before they reach the others. The formation mirrors their music: Serena leads, Kaia brings the edge, Mika keeps the energy unpredictable, Evie holds down the foundation from the back.",
+    "combatTension": "Kaia charges ahead without waiting for Serena's call — she trusts her own instincts over the plan. Mika's playfulness in combat makes Kaia furious ('this isn't a game'). Evie's hesitation at close range means Kaia has to cover for her if the line breaks, which Kaia resents because she won't admit she's protecting someone. Serena tries to hold it all together, but when her emotions spike her fire becomes indiscriminate — and the team has to scatter from their own leader."
   }
 }

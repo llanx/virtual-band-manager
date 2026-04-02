@@ -8,3 +8,20 @@ desktop.ini
 *~
 .vscode/
 .idea/
+
+# Songs (generated content)
+songs/
+
+# Initial set list (separate from story arc)
+Initial Set List.xlsx
+
+# Story arc (private development)
+references/story-arc-timeline.md
+references/story-meta-ideas.md
+references/story-finale-concept.md
+
+# Song DNA Registry (per-user catalog data)
+references/song-dna-registry.md
+
+# Claude Code session files
+.claude/
