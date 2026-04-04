@@ -24,10 +24,8 @@
 
 ## Member Reactions
 
-- **SERENA:** [1 sentence in-character reaction to the concept]
-- **KAIA:** [1 sentence in-character reaction]
-- **MIKA:** [1 sentence in-character reaction]
-- **EVIE:** [1 sentence in-character reaction]
+[For each member in the active band, include one line:]
+- **[MEMBER_STAGENAME]:** [1 sentence in-character reaction to the concept]
 
 ## Key Emotions
 

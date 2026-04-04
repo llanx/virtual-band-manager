@@ -2,6 +2,12 @@
   "bandName": "PlaceholderBandName",
   "concept": "A 4-member all-girl band where every member sings but each brings a distinct instrumental identity and musical sensibility. Their sound fuses alt-pop, rock, and R&B into something cohesive yet unpredictable.",
   "formed": "2026-03-09",
+  "lyricLanguageConfig": {
+    "primary": "english",
+    "secondary": "korean",
+    "ratio": "75-80 / 20-25",
+    "rules": "mid-line substitution, full Korean lines, stanza position rotation"
+  },
   "members": [
     {
       "id": "serena",

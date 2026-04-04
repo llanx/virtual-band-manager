@@ -11,6 +11,27 @@ Complete documentation for the band member JSON profile format.
 | `formed` | string | yes | ISO date string (YYYY-MM-DD) |
 | `members` | array | yes | Array of member objects |
 | `dynamics` | object | no | Group dynamics and interpersonal notes |
+| `lyricLanguageConfig` | object | no | Bilingual/multilingual lyric settings (see below) |
+
+### Lyric Language Config
+
+Controls whether the band writes monolingual or bilingual lyrics. If this object is absent or `secondary` is empty, the skill writes monolingual lyrics and skips all bilingual rules.
+
+```json
+"lyricLanguageConfig": {
+  "primary": "english",
+  "secondary": "korean",
+  "ratio": "75-80 / 20-25",
+  "rules": "mid-line substitution, full secondary-language lines, stanza position rotation"
+}
+```
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `primary` | string | yes | Primary lyric language (e.g., `english`, `japanese`, `spanish`) |
+| `secondary` | string | no | Secondary language for bilingual mixing. Empty = monolingual |
+| `ratio` | string | no | Percentage split (e.g., `"75-80 / 20-25"` meaning primary / secondary) |
+| `rules` | string | no | Placement rules for the secondary language (e.g., mid-line substitution, chorus hooks, bridge-only) |
 
 ### Dynamics Object
 
@@ -207,3 +228,44 @@ For bands with a fantasy/game identity (e.g., demon hunters, dungeon crawlers), 
 6. `techniques` should contain at least 2 entries
 7. Exactly one member should have `role: "leader"`
 8. At least one member should have `position: "main-vocal"` or `position: "lead-vocal"`
+
+---
+
+## Universe Schema
+
+Each universe is stored at `universes/{slug}/universe.json`. Template: `templates/blank-universe.json`.
+
+```json
+{
+  "universeName": "Cosmic Battle",
+  "slug": "cosmic-battle",
+  "description": "A cosmic, dreamlike battle arena...",
+  "themes": ["sacrifice", "memory erasure"],
+  "hasFantasyProfiles": true,
+  "created": "2026-03-09"
+}
+```
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `universeName` | string | yes | Display name of the universe |
+| `slug` | string | yes | URL-safe identifier (lowercase, hyphens, no special characters) |
+| `description` | string | yes | 1-3 sentence concept for this universe |
+| `themes` | array[string] | yes | Core thematic keywords (3-6 entries) |
+| `hasFantasyProfiles` | boolean | yes | Whether member creation should include fantasy profile questions |
+| `created` | string | yes | ISO date string (YYYY-MM-DD) |
+
+### Universe Directory Structure
+
+```
+universes/{slug}/
+├── universe.json           # Universe metadata
+├── bands/                  # Band JSON files for this universe
+│   └── {band-slug}.json
+├── lore/                   # Universe-specific story and lore files
+│   └── (story-arc-timeline.md, etc.)
+├── songs/                  # Songs organized per-band
+│   └── {band-slug}/
+│       └── (song files)
+└── song-dna-registry.md    # Per-universe pattern tracking
+```

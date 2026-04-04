@@ -9,19 +9,19 @@ desktop.ini
 .vscode/
 .idea/
 
-# Songs (generated content)
-songs/
+# Universe-specific content (songs, lore, DNA registries)
+universes/*/songs/
+universes/*/lore/
+universes/*/song-dna-registry.md
 
 # Initial set list (separate from story arc)
 Initial Set List.xlsx
 
-# Story arc (private development)
-references/story-arc-timeline.md
-references/story-meta-ideas.md
-references/story-finale-concept.md
+# Archived content (soft deletes)
+_archive/
 
-# Song DNA Registry (per-user catalog data)
-references/song-dna-registry.md
+# Active context (per-user state)
+active-context.json
 
 # Claude Code session files
 .claude/
